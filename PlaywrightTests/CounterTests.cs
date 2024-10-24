@@ -22,6 +22,7 @@ public class CounterTests : PageTest
 
         // Assert
         var content = await Page.TextContentAsync("p");
-        Assert.AreEqual("Current count: 1", content);
+        Assert.That(content, Is.EqualTo("Current count: 1"));
+
     }
 }

@@ -18,6 +18,6 @@ public class FetchDataTests : PageTest
 
         // Assert
         var amount = await Page.Locator("data-test-id=forecase-item").CountAsync();
-        Assert.AreEqual(5, amount);
+        Assert.That(amount, Is.EqualTo(5));
     }
 }
